@@ -1,0 +1,30 @@
+<h4 class="section-title ruta">
+  C:/LCassarini/<span class="titulo" id="maquina-acreditation"
+    >Acreditations</span
+  ><span class="cursor">_</span>
+</h4>
+
+<div id="acreditations">
+
+  <div *ngFor="let acreditation of acreditations" class="card mb-3 card-about text-center glass" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src={{acreditation.imagen}}
+          class="img-fluid img-circle"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{acreditation.titulo}}
+          </h5>
+          <p class="card-text">{{acreditation.descripcion}}</p>
+          <p class="card-text">{{acreditation.fecha}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

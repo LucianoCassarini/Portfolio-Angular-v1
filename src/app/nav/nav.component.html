@@ -1,0 +1,133 @@
+<!--?=============================================================================-->
+<!--?                                       NAV                                   -->
+<!--?=============================================================================-->
+
+<nav class="navbar fixed-top">
+  <div class="container-fluid fixed-top nav-main-div">
+    <!--! Argentina programa logo -->
+    <a
+      class="navbar-brand"
+      href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"
+      target="_blank"
+    >
+      <div class="logo">
+        <img
+          src="../../assets/logoArgentinaPrograma.png"
+          alt="logo de Argentina programa"
+        />
+      </div>
+    </a>
+
+    <!--! Manú Sandwich -->
+    <button
+      class="navbar-toggler sandwich-menu"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <svg
+        class="navbar-toggler-icon sandwich-icon bi bi-list"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    </button>
+    <div
+      class="offcanvas offcanvas-end glass sidebar"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <!--! Titulo de menú desplegable -->
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">LCassarini</h5>
+        <!--! crucecita de cierre -->
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!--! Opciones de navegación -->
+      <div class="offcanvas-body sections">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-house-chimney"></i>
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#about">
+              <i class="fa-solid fa-user"></i>
+              About Me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">
+              <i class="fa-solid fa-code"></i>
+              Projects
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">
+              <i class="fa-solid fa-envelope"></i>
+              Contact Me</a
+            >
+          </li>
+        </ul>
+
+        <div id="lenguage-switch">
+          <p>Lenguages:</p>
+          <p>En</p>
+          <div class="form-check form-switch">
+            <input
+              type="checkbox"
+              class="form-check-input switch"
+              id="check-lenguage"
+            />
+          </div>
+          <p>Es</p>
+        </div>
+
+        <div id="login-btn">
+          <p>Admin Opcions</p>
+          <button
+            class="btn-neon"
+            onclick="openLogin()"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            LogIn
+          </button>
+        </div>
+
+        <div id="social-networks" class="container">
+          <a href="https://www.instagram.com/lucianocassarini/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://twitter.com/Lucho_Cassarini" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/lcassarini/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
