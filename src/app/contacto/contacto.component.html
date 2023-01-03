@@ -1,0 +1,47 @@
+<!--? --------------- CONTACT ME ---------------- -->
+
+<h4 class="section-title ruta">
+  C:/LCassarini/<span class="titulo" id="maquina-contact">ContactMe</span
+  ><span class="cursor">_</span>
+</h4>
+
+<div id="contact" class="contaier">
+  <div id="my-contacts" class="container glass card">
+    <p>Do you want to communicate with me?</p>
+    <img id="foto-contacto" src="../../assets/ilustración4.png" alt="perfil" />
+  </div>
+  <div id="contact-networks" class="container">
+    <div id="portapapeles">
+      <p id="correo">lucianogabrielcassarini@gmail.com</p>
+      <p id="phone-number">3404516686</p>
+    </div>
+    <!--!----- EMail ------->
+    <button id="btn_correo" (click)="copiarAlPortapapeles('correo')">
+      <div class="card glass contacto">
+        <i class="fa-regular fa-envelope"></i>
+    </div>
+    </button>
+
+    <!--!----- Linkedin ------->
+    <a href="https://www.linkedin.com/in/lcassarini/" target="_blank">
+      <div class="card glass contacto">
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </a>
+
+    <!--!----- Instagram ------->
+    <a href="https://www.instagram.com/lucianocassarini" target="_blank">
+      <div class="card glass contacto">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </a>
+
+    <!--!----- Number ------->
+    <button (click)="copiarAlPortapapeles('phone-number')">
+        <div class="card glass contacto">
+            <i class="fa-solid fa-comment-sms"></i>
+        </div>
+    </button>
+
+  </div>
+</div>

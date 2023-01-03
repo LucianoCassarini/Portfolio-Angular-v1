@@ -16,6 +16,9 @@ import { LearningComponent } from './learning/learning.component';
 import { WorkedComponent } from './worked/worked.component';
 import { LearningServicios } from './learning/learning.servicio';
 import { WorkedServicios } from './worked/worked.servicio';
+import { ProyectosComponent } from './proyectos/proyectos.component';
+import { ProyectoServicios } from './proyectos/proyecto.servicio';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +31,10 @@ import { WorkedServicios } from './worked/worked.servicio';
     SkillsComponent,
     LearningComponent,
     WorkedComponent,
+    ProyectosComponent,
+    ContactoComponent,
   ],
-  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios],
+  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
 })

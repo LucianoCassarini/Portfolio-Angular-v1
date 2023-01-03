@@ -1,0 +1,23 @@
+<h4 class="section-title ruta">
+  C:/LCassarini/<span class="titulo" id="maquina-project">Projects</span
+  ><span class="cursor">_</span>
+</h4>
+<div id="projects" class="container">
+
+  <div class="contenedor" *ngFor="let proyecto of proyectos">
+    <figure>
+      <img src={{proyecto.imagen}} alt={{proyecto.titulo}} />
+      <div class="capa glass">
+        <h3 class="neon-text">{{proyecto.titulo}}</h3>
+        <p>
+          {{proyecto.descripcion}}
+        </p>
+        <div class="btn-proyectos">
+            <a href={{proyecto.host}} target="_blank" class="btn btn-primary btn-neon">Web Host</a>
+            <a href={{proyecto.git}} target="_blank" class="btn btn-primary btn-neon">Github</a>
+        </div>
+      </div>
+    </figure>
+  </div>
+
+</div>

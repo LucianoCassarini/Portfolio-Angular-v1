@@ -426,7 +426,13 @@
     margin-bottom: 10px;
   }
   
-  .contenedor figure .capa a {
+  .contenedor figure .capa .btn-proyectos{
+    position: absolute;
+    left:0px;
+    right:0px;
+    bottom: 5px;
+  }
+  .contenedor figure .capa .btn-proyectos a {
     margin-right: 10px;
   }
   
