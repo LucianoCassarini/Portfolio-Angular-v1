@@ -20,6 +20,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ProyectoServicios } from './proyectos/proyecto.servicio';
 import { ContactoComponent } from './contacto/contacto.component';
 import { PersonaServicio } from './persona.servicio';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { PersonaServicio } from './persona.servicio';
     WorkedComponent,
     ProyectosComponent,
     ContactoComponent,
+    FooterComponent,
   ],
   providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios, PersonaServicio],
   bootstrap: [AppComponent],
