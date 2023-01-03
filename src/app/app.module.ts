@@ -22,6 +22,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { PersonaServicio } from './persona.servicio';
 import { FooterComponent } from './footer/footer.component';
 
+import { NgParticlesModule } from "ng-particles";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,6 @@ import { FooterComponent } from './footer/footer.component';
   ],
   providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios, PersonaServicio],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, NgParticlesModule],
 })
 export class AppModule {}

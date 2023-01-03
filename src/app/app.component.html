@@ -6,28 +6,61 @@
 <div id="main-gap">
   <div class="container">
 
+    <ng-particles
+      [id]="id"
+      [options]="particlesOptions"
+      [particlesInit]="particlesInit"
+      (particlesLoaded)="particlesLoaded($event)"
+    ></ng-particles>
+
     <app-banner></app-banner>
 
+    <!-- ? ABOUT ME -->
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-about">AboutMe</span
+      ><span class="cursor">_</span>
+    </h4>
     <app-who-am-i></app-who-am-i>
 
     <hr class="separation" />
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-work">Work</span
+      ><span class="cursor">_</span>
+    </h4>
     <app-work></app-work>
 
     <hr class="separation" />
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-acreditation"
+        >Acreditations</span
+      ><span class="cursor">_</span>
+    </h4>
     <app-acreditations></app-acreditations>
 
     <hr class="separation" />
 
     <!--?====================== SKILLS ======================-->
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-skills">Skills</span
+      ><span class="cursor">_</span>
+    </h4>    
     <app-skills></app-skills>
 
     <!--?====================== PROYECTOS ======================-->
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-project">Projects</span
+      ><span class="cursor">_</span>
+    </h4>
     <app-proyectos></app-proyectos>
-    
-    <hr class="separation" />
 
+    <hr class="separation" />
+    <!--? --------------- CONTACT ME ---------------- -->
+    <h4 class="section-title ruta">
+      C:/LCassarini/<span class="titulo" id="maquina-contact">ContactMe</span
+      ><span class="cursor">_</span>
+    </h4>
     <app-contacto></app-contacto>
   </div>
-  
+
   <app-footer></app-footer>
 </div>
