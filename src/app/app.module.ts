@@ -19,6 +19,7 @@ import { WorkedServicios } from './worked/worked.servicio';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ProyectoServicios } from './proyectos/proyecto.servicio';
 import { ContactoComponent } from './contacto/contacto.component';
+import { PersonaServicio } from './persona.servicio';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ContactoComponent } from './contacto/contacto.component';
     ProyectosComponent,
     ContactoComponent,
   ],
-  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios],
+  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios, PersonaServicio],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
 })

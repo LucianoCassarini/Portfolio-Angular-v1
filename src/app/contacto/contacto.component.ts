@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import Swal from 'sweetalert2';
+import { Persona } from '../persona.model';
+import { PersonaServicio } from '../persona.servicio';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css'],
 })
-export class ContactoComponent {
+export class ContactoComponent implements OnInit{
+  persona:Persona;
 
+  constructor(private personaServicio:PersonaServicio){}
+
+  ngOnInit(){
+    this.persona = this.personaServicio.persona;
+  }
   //******************************************************************************
   // *                           Copiar al portapapeles
   // *****************************************************************************
@@ -25,5 +35,16 @@ export class ContactoComponent {
     document.body.removeChild(aux);
   }
 
-
+  //******************************************************************************
+  // *                                  Alertas!
+  // *****************************************************************************
+  public copy_alert(name_alert: String) {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: `${name_alert} has been copied.`,
+      showConfirmButton: false,
+      timer: 2000,
+    });
+  }
 }

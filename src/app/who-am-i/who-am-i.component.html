@@ -9,7 +9,7 @@
       <h3 class="neon-text">Who am I ?</h3>
       <p>
         I´m a Informatic engineering student and Full Stack web developer. I’m
-        from Argentina and I’m 23 years old. I make IT solutions and my favorite
+        from Argentina and I’m {{persona.edad}} years old. I make IT solutions and my favorite
         area is the back end.
       </p>
     </div>
@@ -18,7 +18,7 @@
     <p>If you want to know more about me</p>
     <!-- <a class="button-aboutme" id="acerca-de-mi" href="/files_extras/María Antonieta Romani - CV-1.pdf"
                       target="_blank">Curriculum</a> -->
-    <a class="btn-neon" href="../../assets/lcassariniCV.pdf" target="_blank"
+    <a class="btn-neon" href="{{ persona.urlCurriculim }}" target="_blank"
       >Download cv</a
     >
   </div>

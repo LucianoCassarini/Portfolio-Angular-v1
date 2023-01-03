@@ -12,32 +12,32 @@
   </div>
   <div id="contact-networks" class="container">
     <div id="portapapeles">
-      <p id="correo">lucianogabrielcassarini@gmail.com</p>
-      <p id="phone-number">3404516686</p>
+      <p id="correo">{{persona.correo}}</p>
+      <p id="phone-number">{{persona.telefono}}</p>
     </div>
     <!--!----- EMail ------->
-    <button id="btn_correo" (click)="copiarAlPortapapeles('correo')">
+    <button id="btn_correo" (click)="copiarAlPortapapeles('correo'); copy_alert('Email')">
       <div class="card glass contacto">
         <i class="fa-regular fa-envelope"></i>
     </div>
     </button>
 
     <!--!----- Linkedin ------->
-    <a href="https://www.linkedin.com/in/lcassarini/" target="_blank">
+    <a href={{persona.linkedin}} target="_blank">
       <div class="card glass contacto">
         <i class="fa-brands fa-linkedin"></i>
       </div>
     </a>
 
     <!--!----- Instagram ------->
-    <a href="https://www.instagram.com/lucianocassarini" target="_blank">
+    <a href={{persona.instagram}} target="_blank">
       <div class="card glass contacto">
         <i class="fa-brands fa-instagram"></i>
       </div>
     </a>
 
     <!--!----- Number ------->
-    <button (click)="copiarAlPortapapeles('phone-number')">
+    <button (click)="copiarAlPortapapeles('phone-number'); copy_alert('Number')">
         <div class="card glass contacto">
             <i class="fa-solid fa-comment-sms"></i>
         </div>
