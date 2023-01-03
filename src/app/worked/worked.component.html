@@ -1,0 +1,7 @@
+<p class="neon-text">And I’ve also worked with</p>
+<div class="worked">
+  <div class="technology" *ngFor="let tecnologia of worked">
+    <img src="{{ tecnologia.imagen }}" alt="{{ tecnologia.nombre }}" />
+    <p>{{ tecnologia.nombre }}</p>
+  </div>
+</div>

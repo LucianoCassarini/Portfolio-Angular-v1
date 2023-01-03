@@ -10,21 +10,27 @@ import { WorkComponent } from './work/work.component';
 import { AcreditationsComponent } from './acreditations/acreditations.component';
 import { AcreditationServicio } from './acreditations/acreditations.servicio';
 import { WorkServicio } from './work/work.servicio';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillServicios } from './skills/skills.servicio';
+import { LearningComponent } from './learning/learning.component';
+import { WorkedComponent } from './worked/worked.component';
+import { LearningServicios } from './learning/learning.servicio';
+import { WorkedServicios } from './worked/worked.servicio';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavComponent,
-        BannerComponent,
-        WhoAmIComponent,
-        WorkComponent,
-        AcreditationsComponent
-    ],
-    providers: [AcreditationServicio, WorkServicio],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-    ]
+  declarations: [
+    AppComponent,
+    NavComponent,
+    BannerComponent,
+    WhoAmIComponent,
+    WorkComponent,
+    AcreditationsComponent,
+    SkillsComponent,
+    LearningComponent,
+    WorkedComponent,
+  ],
+  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios],
+  bootstrap: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule],
 })
-export class AppModule { }
+export class AppModule {}

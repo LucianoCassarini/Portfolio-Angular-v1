@@ -1,0 +1,38 @@
+<h4 class="section-title ruta">
+  C:/LCassarini/<span class="titulo" id="maquina-skills">Skills</span
+  ><span class="cursor">_</span>
+</h4>
+
+<div id="skills">
+  <div id="skills-media">
+    <div id="barras-progreso" class="container glass card">
+      <div class="progress-lenguage" *ngFor="let skill of skills">
+        <p>{{ skill.nombre }}</p>
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="20"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [ngStyle]="{
+              width: skill.porcentaje,
+              'background-color': skill.color
+            }"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEARNING -->
+    <div id="learn-container" class="card container glass">
+      <app-learning></app-learning>
+    </div>
+  </div>
+
+  <div class="card container glass">
+    <app-worked></app-worked>
+  </div>
+</div>
+
+<hr class="separation" />
