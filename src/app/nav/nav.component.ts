@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from '../persona.model';
 import { PersonaServicio } from '../persona.servicio';
 
@@ -9,9 +10,13 @@ import { PersonaServicio } from '../persona.servicio';
 })
 export class NavComponent implements OnInit{
   persona:Persona;
-  constructor(private personaServicio:PersonaServicio){}
+  constructor(private personaServicio:PersonaServicio, private router:Router){}
 
   ngOnInit(): void {
       this.persona = this.personaServicio.persona;
+  }
+
+  openLogin(){
+    this.router.navigate(['/login']);
   }
 }

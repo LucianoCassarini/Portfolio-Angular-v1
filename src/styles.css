@@ -557,10 +557,11 @@
     z-index: 10;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
-  #usr-box svg,
-  #pass-box svg {
+  #usr-box i,
+  #pass-box i {
     width: 30px;
   }
   

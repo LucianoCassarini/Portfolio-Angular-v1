@@ -21,8 +21,11 @@ import { ProyectoServicios } from './proyectos/proyecto.servicio';
 import { ContactoComponent } from './contacto/contacto.component';
 import { PersonaServicio } from './persona.servicio';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
-import { NgParticlesModule } from "ng-particles";
+import { NgParticlesModule } from 'ng-particles';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +41,19 @@ import { NgParticlesModule } from "ng-particles";
     ProyectosComponent,
     ContactoComponent,
     FooterComponent,
+    LoginComponent,
+    HomeComponent,
   ],
-  providers: [AcreditationServicio, WorkServicio, SkillServicios, LearningServicios, WorkedServicios, ProyectoServicios, PersonaServicio],
+  providers: [
+    AcreditationServicio,
+    WorkServicio,
+    SkillServicios,
+    LearningServicios,
+    WorkedServicios,
+    ProyectoServicios,
+    PersonaServicio,
+  ],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgParticlesModule],
+  imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule,]
 })
 export class AppModule {}
