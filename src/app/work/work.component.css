@@ -1,0 +1,27 @@
+.botones-de-edicion{
+    display: flex;
+    justify-content: right;
+}
+
+.botones-de-edicion button{
+    margin: 0 4px;
+}
+
+#editar:hover{
+    background-color: rgb(102, 212, 255);
+}
+
+#eliminar:hover{
+    background-color: red;
+}
+
+.boton-agregar{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.boton-agregar button:hover{
+    background-color: rgb(188, 255, 188);
+}
+

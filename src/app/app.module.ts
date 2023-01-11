@@ -23,9 +23,13 @@ import { PersonaServicio } from './persona.servicio';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { NgParticlesModule } from 'ng-particles';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './work/new-experiencia.component';
+import { EditExperienciaComponent } from './work/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,8 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     LoginComponent,
     HomeComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
   ],
   providers: [
     AcreditationServicio,
@@ -54,6 +60,6 @@ import { HomeComponent } from './home/home.component';
     PersonaServicio,
   ],
   bootstrap: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule,]
+  imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule, FormsModule,]
 })
 export class AppModule {}
