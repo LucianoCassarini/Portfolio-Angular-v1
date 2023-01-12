@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Acreditation } from './acreditations.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService implements OnInit {
-  URL = environment.URL + 'educacion/';
+  URL = 'http://localhost:8080/educacion/';
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {

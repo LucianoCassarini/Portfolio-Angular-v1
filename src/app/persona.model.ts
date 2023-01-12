@@ -1,14 +1,41 @@
-export class Persona{
-    edad:Number;
-    constructor(public urlPerfil:String, public nombre:String, public correo:String, public linkedin:String, public instagram:String, public twitter:String, public telefono:String, public urlCurriculim:String){
-        function calculateAge(birthday) {
-            var birthday_arr = birthday.split("/");
-            var birthday_date = new Date(birthday_arr[2], birthday_arr[1] - 1, birthday_arr[0]);
-            var ageDifMs = Date.now() - birthday_date.getTime();
-            var ageDate = new Date(ageDifMs);
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
+export class Persona {
+  nombre: string;
+  apellido: string;
+  descripcion: string;
+  correo: string;
+  telefono: string;
+  linkedin: string;
+  twitter: string;
+  instagram: string;
+  urlcv: string;
+  img: string;
+  usuario: string;
+  contrasena: string;
 
-        this.edad = calculateAge("19/01/1999");
-    }
+  constructor(nombre: string,
+    apellido: string,
+    descripcion: string,
+    correo: string,
+    telefono: string,
+    linkedin: string,
+    twitter: string,
+    instagram: string,
+    urlcv: string,
+    img: string,
+    usuario: string,
+    contrasena: string,){
+    
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.descripcion = descripcion;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.linkedin = linkedin;
+        this.twitter = twitter;
+        this.instagram = instagram;
+        this.urlcv = urlcv;
+        this.img = img;
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+  }
 }

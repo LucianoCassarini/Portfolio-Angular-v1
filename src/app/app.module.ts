@@ -34,6 +34,7 @@ import { EditeducacionComponent } from './acreditations/editeducacion.component'
 import { SkillsService } from './skills/skills.service';
 import { EditSkillComponent } from './skills/edit-skill.component';
 import { NewSkillComponent } from './skills/new-skill.component';
+import { EditPersonaComponent } from './who-am-i/edit-persona.component';
 
 
 @NgModule({
@@ -57,16 +58,17 @@ import { NewSkillComponent } from './skills/new-skill.component';
     NeweducacionComponent,
     EditeducacionComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditPersonaComponent
   ],
   providers: [
     WorkServicio,
     LearningServicios,
     WorkedServicios,
     ProyectoServicios,
-    PersonaServicio,
     EducacionService,
-    SkillsService
+    SkillsService,
+    PersonaServicio
   ],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule, FormsModule,]

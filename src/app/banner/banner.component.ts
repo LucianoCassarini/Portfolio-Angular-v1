@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona.model';
 import { PersonaServicio } from '../persona.servicio';
-import { PersonaPrueba } from '../prueba/persona-prueba.model';
-import { PersonaPruebaService } from '../prueba/persona-prueba.service.ts.service';
 
 @Component({
   selector: 'app-banner',
@@ -18,11 +16,19 @@ export class BannerComponent implements OnInit{
   //     this.persona = this.personaServicio.persona;
   // }
 
-  persona : PersonaPrueba = new PersonaPrueba("","","");
+  persona : Persona = new Persona("","","","","","","","","","","","");
   
-  constructor(public personaPService :PersonaPruebaService){}
+  constructor(public personaService :PersonaServicio){}
 
   ngOnInit(): void {
-      this.personaPService.getPersona().subscribe(data => {this.persona = data})
+    this.cargarPersona();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data
+      }
+    )
   }
 }

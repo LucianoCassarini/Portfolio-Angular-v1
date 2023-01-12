@@ -10,10 +10,18 @@ import { PersonaServicio } from '../persona.servicio';
 })
 export class NavComponent implements OnInit{
   persona:Persona;
-  constructor(private personaServicio:PersonaServicio, private router:Router){}
+  constructor(private personaService:PersonaServicio, private router:Router){}
 
   ngOnInit(): void {
-      this.persona = this.personaServicio.persona;
+    this.cargarPersona();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data
+      }
+    )
   }
 
   openLogin(){
