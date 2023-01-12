@@ -10,7 +10,6 @@ import { WorkComponent } from './work/work.component';
 import { AcreditationsComponent } from './acreditations/acreditations.component';
 import { WorkServicio } from './work/work.servicio';
 import { SkillsComponent } from './skills/skills.component';
-import { SkillServicios } from './skills/skills.servicio';
 import { LearningComponent } from './learning/learning.component';
 import { WorkedComponent } from './worked/worked.component';
 import { LearningServicios } from './learning/learning.servicio';
@@ -32,6 +31,9 @@ import { EditExperienciaComponent } from './work/edit-experiencia.component';
 import { EducacionService } from './acreditations/educacion.service';
 import { NeweducacionComponent } from './acreditations/neweducacion.component';
 import { EditeducacionComponent } from './acreditations/editeducacion.component';
+import { SkillsService } from './skills/skills.service';
+import { EditSkillComponent } from './skills/edit-skill.component';
+import { NewSkillComponent } from './skills/new-skill.component';
 
 
 @NgModule({
@@ -53,16 +55,18 @@ import { EditeducacionComponent } from './acreditations/editeducacion.component'
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
-    EditeducacionComponent
+    EditeducacionComponent,
+    EditSkillComponent,
+    NewSkillComponent
   ],
   providers: [
     WorkServicio,
-    SkillServicios,
     LearningServicios,
     WorkedServicios,
     ProyectoServicios,
     PersonaServicio,
-    EducacionService
+    EducacionService,
+    SkillsService
   ],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule, FormsModule,]

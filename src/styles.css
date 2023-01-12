@@ -312,7 +312,7 @@
   
   /*?========================= Skills ======================*/
   .progress {
-    width: 65%;
+    width: 40%;
   }
   
   .progress-lenguage {
@@ -621,9 +621,9 @@
     }
   
     #barras-progreso {
-      width: 60%;
+      width: 100%;
       margin-left: 0;
-      margin-right: 10px;
+      margin-right: 0px;
     }
   
     .progress {
@@ -753,7 +753,7 @@
     }
   
     #barras-progreso {
-      width: 70%;
+      width: 100%;
       margin-left: 0;
       margin-right: 10px;
     }

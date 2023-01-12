@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 import { Work } from "./work.model";
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Work } from "./work.model";
 })
 
 export class WorkServicio{
-    expURL = 'http://localhost:8080/explab/'
+    expURL = environment.URL + 'explab/';
 
     constructor(private httpClient: HttpClient){
         
