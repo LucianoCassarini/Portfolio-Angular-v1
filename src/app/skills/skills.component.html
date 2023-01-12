@@ -1,9 +1,8 @@
-<div class="col-lg-2 boton-agregar">
+<div class="col-lg-2 boton-agregar" *ngIf="isLogged">
   <button
     type="button"
     class="btn btn-dark"
     routerLink="/nuevaskill"
-    *ngIf="true"
   >
     <i class="fa-solid fa-plus"></i>
 </button>
@@ -13,7 +12,7 @@
     <div id="skills-media">
       <div id="barras-progreso" class="container glass card">
         <div class="progress-lenguage" *ngFor="let skill of skills">
-          <div *ngIf="true" class="botones-de-edicion">
+          <div *ngIf="isLogged" class="botones-de-edicion">
             <button
               id="editar"
               class="btn btn-dark"

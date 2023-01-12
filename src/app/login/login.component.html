@@ -1,42 +1,21 @@
- <!--? ============================== LOGIN ============================== -->
- <div class="vh-100 glass">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div id="login-card" class="card shadow-2-strong">
-            
-            <a id="close-login" href="#">
-                <i class="fa-solid fa-circle-xmark"></i>
-            </a>
+<!--? ============================== LOGIN ============================== -->
+<div class="container">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onValidarUsuario()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="usuario">User</label>
+                  <input type="text" class="form-control" id="usuario" name="usuario" [(ngModel)]="usuario" required>
+              </div>
+              <div class="form-group">
+                  <label for="contrasena">Password</label>
+                  <input type="text" class="form-control" id="contrasena" name="contrasena" [(ngModel)]="contrasena" required>
+              </div>
 
-            <div class="card-body p-5 text-center">
-  
-              <h3 class="mb-5">Sign in</h3>
-  
-              <div class="form-outline mb-4 custom-input">
-                <div id="usr-box">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Username"/>
-              </div>
-  
-              <div class="form-outline mb-4 custom-input">
-                <div id="pass-box">
-                    <i class="fa-solid fa-key"></i>
-                </div>
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Password"/>
-              </div>
-  
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-start mb-4">
-                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-                <label class="form-check-label" for="form1Example3"> Remember password </label>
-              </div>
-  
-              <button class="btn btn-neon" type="submit">Login</button>
-  
-            </div>
-          </div>
-        </div>
+              <button class="btn btn-primary" >
+                  Agregar experiencia
+              </button>
+          </form>
       </div>
-    </div>
+  </div>
+</div>

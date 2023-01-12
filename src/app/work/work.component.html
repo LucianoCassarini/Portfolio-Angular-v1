@@ -1,9 +1,8 @@
-<div class="col-lg-2 boton-agregar">
+<div class="col-lg-2 boton-agregar" *ngIf="isLogged">
   <button
     type="button"
     class="btn btn-dark"
     routerLink="/nuevaexp"
-    *ngIf="true"
   >
     <i class="fa-solid fa-plus"></i>
   </button>
@@ -27,7 +26,7 @@
           <p class="card-text">{{ work.descripcionE }}</p>
           <p class="card-text">{{ work.fecha }}</p>
 
-          <div class="botones-de-edicion" *ngIf="true">
+          <div class="botones-de-edicion" *ngIf="isLogged">
             <button
               id="editar"
               class="btn btn-dark"

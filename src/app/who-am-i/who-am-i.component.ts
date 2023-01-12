@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 import { Persona } from '../persona.model';
 import { PersonaServicio } from '../persona.servicio';
 
@@ -10,9 +11,9 @@ import { PersonaServicio } from '../persona.servicio';
 export class WhoAmIComponent implements OnInit{
   persona : Persona = null;
   
-  constructor(public personaService :PersonaServicio){}
+  constructor(public personaService :PersonaServicio,public loginService:LoginService){}
 
-  isLogged = true;
+  isLogged : boolean = this.loginService.getToken();
 
   ngOnInit(): void {
     this.cargarPersona();

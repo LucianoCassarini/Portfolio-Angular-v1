@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 import { Acreditation } from './acreditations.model';
 import { EducacionService } from './educacion.service';
 
@@ -10,9 +11,9 @@ import { EducacionService } from './educacion.service';
 export class AcreditationsComponent implements OnInit{
   educacion:Acreditation[] = [];
 
-  constructor(private educacionS:EducacionService){}
+  constructor(private educacionS:EducacionService,public loginService : LoginService){}
 
-  isLogged = false;
+  isLogged = this.loginService.getToken();
 
   ngOnInit(){
     this.cargarEducacion();

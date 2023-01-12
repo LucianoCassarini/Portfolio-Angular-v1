@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 import { Work } from './work.model';
 import { WorkServicio } from './work.servicio';
 
@@ -11,9 +12,9 @@ import { WorkServicio } from './work.servicio';
 export class WorkComponent implements OnInit{
   works:Work[] = [];
 
-  constructor(private worksServicio:WorkServicio, private router : Router){}
+  constructor(private worksServicio:WorkServicio, private router : Router, public loginService:LoginService){}
 
-  isLogged = false;
+  isLogged = this.loginService.getToken();
 
   ngOnInit(){
     this.cargarExperiencia();

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 import { Skill } from './skills.model';
 import { SkillsService } from './skills.service';
 
@@ -10,9 +11,9 @@ import { SkillsService } from './skills.service';
 export class SkillsComponent implements OnInit{
   skills:Skill[] = [];
 
-  constructor(private skillS:SkillsService){}
+  constructor(private skillS:SkillsService,public loginService : LoginService){}
 
-  isLogged = false;
+  isLogged = this.loginService.getToken();
 
   ngOnInit(){
     this.cargarSkills();
