@@ -8,7 +8,6 @@ import { BannerComponent } from './banner/banner.component';
 import { WhoAmIComponent } from './who-am-i/who-am-i.component';
 import { WorkComponent } from './work/work.component';
 import { AcreditationsComponent } from './acreditations/acreditations.component';
-import { AcreditationServicio } from './acreditations/acreditations.servicio';
 import { WorkServicio } from './work/work.servicio';
 import { SkillsComponent } from './skills/skills.component';
 import { SkillServicios } from './skills/skills.servicio';
@@ -30,6 +29,10 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './work/new-experiencia.component';
 import { EditExperienciaComponent } from './work/edit-experiencia.component';
+import { EducacionService } from './acreditations/educacion.service';
+import { NeweducacionComponent } from './acreditations/neweducacion.component';
+import { EditeducacionComponent } from './acreditations/editeducacion.component';
+
 
 @NgModule({
   declarations: [
@@ -49,15 +52,17 @@ import { EditExperienciaComponent } from './work/edit-experiencia.component';
     HomeComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent
   ],
   providers: [
-    AcreditationServicio,
     WorkServicio,
     SkillServicios,
     LearningServicios,
     WorkedServicios,
     ProyectoServicios,
     PersonaServicio,
+    EducacionService
   ],
   bootstrap: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, NgParticlesModule, HttpClientModule, FormsModule,]

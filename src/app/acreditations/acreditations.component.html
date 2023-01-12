@@ -1,25 +1,50 @@
+<div class="col-lg-2 boton-agregar">
+  <button
+    type="button"
+    class="btn btn-dark"
+    routerLink="/nuevaedu"
+    *ngIf="true"
+  >
+    <i class="fa-solid fa-plus"></i>
+  </button>
+</div>
 
-<div id="acreditations">
-
-  <div *ngFor="let acreditation of acreditations" class="card mb-3 card-about text-center glass" style="max-width: 540px">
-    <div class="row g-0">
+<div id="work-experience">
+  <div
+    *ngFor="let acreditacion of educacion"
+    class="card mb-3 card-about text-center glass"
+    style="max-width: 540px"
+  >
+    <div class="row g-0" style="width: 100%">
       <div class="col-md-4">
-        <img
-          src={{acreditation.imagen}}
-          class="img-fluid img-circle"
-          alt="..."
-        />
+        <img src="{{acreditacion.urlImagenEdu}}" class="img-fluid img-circle" alt="..." />
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title">
-            {{acreditation.titulo}}
+            {{ acreditacion.nombreEdu }}
           </h5>
-          <p class="card-text">{{acreditation.descripcion}}</p>
-          <p class="card-text">{{acreditation.fecha}}</p>
+          <p class="card-text">{{ acreditacion.descripcionEdu }}</p>
+          <p class="card-text">{{ acreditacion.fechaEdu }}</p>
+
+          <div class="botones-de-edicion" *ngIf="true">
+            <button
+              id="editar"
+              class="btn btn-dark"
+              routerLink="/editedu/{{ acreditacion.id }}"
+            >
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button
+              id="eliminar"
+              class="btn btn-dark"
+              (click)="delete(acreditacion.id)"
+            >
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
