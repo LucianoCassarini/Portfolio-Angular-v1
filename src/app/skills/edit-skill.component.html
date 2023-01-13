@@ -1,6 +1,9 @@
-<div class="container" *ngIf="skill">
+<div class="container glass border-glass" *ngIf="skill">
     <div class="row">
         <div>
+            <a id="close-login" href="#">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </a>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre Skill</label>
@@ -15,7 +18,7 @@
                     <input type="text" class="form-control" id="color" name="color" [(ngModel)]="skill.color" required>
                 </div>
 
-                <button class="btn btn-primary" >
+                <button class="btn btn-neon" >
                     Actualizar Skill
                 </button>
             </form>

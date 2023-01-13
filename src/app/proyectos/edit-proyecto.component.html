@@ -1,6 +1,9 @@
-<div class="container" *ngIf="proyecto">
+<div class="container glass border-glass" *ngIf="proyecto">
     <div class="row">
         <div>
+            <a id="close-login" href="#">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </a>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombre">Nombre de Proyecto</label>
@@ -23,7 +26,7 @@
                     <input type="text" class="form-control" id="urlImagent" name="urlImagen" [(ngModel)]="proyecto.urlImagen" required>
                 </div>
 
-                <button class="btn btn-primary" >
+                <button class="btn btn-neon" >
                     Actualizar
                 </button>
             </form>
