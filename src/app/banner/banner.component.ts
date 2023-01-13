@@ -8,11 +8,27 @@ import { PersonaServicio } from '../persona.servicio';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit{
-  persona:Persona;
+  // persona:Persona;
 
-  constructor(private personaServicio:PersonaServicio){}
+  // constructor(private personaServicio:PersonaServicio){}
+
+  // ngOnInit(): void {
+  //     this.persona = this.personaServicio.persona;
+  // }
+
+  persona : Persona = new Persona("","","","","","","","","","","","");
+  
+  constructor(public personaService :PersonaServicio){}
 
   ngOnInit(): void {
-      this.persona = this.personaServicio.persona;
+    this.cargarPersona();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data
+      }
+    )
   }
 }

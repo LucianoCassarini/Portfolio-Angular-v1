@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 import { Skill } from './skills.model';
-import { SkillServicios } from './skills.servicio';
+import { SkillsService } from './skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,12 +9,39 @@ import { SkillServicios } from './skills.servicio';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit{
-  skills:Skill[];
+  skills:Skill[] = [];
 
-  constructor(private skillServicio:SkillServicios){}
+  constructor(private skillS:SkillsService,public loginService : LoginService){}
+
+  isLogged = this.loginService.getToken();
 
   ngOnInit(){
-      this.skills = this.skillServicio.skills;
+    this.cargarSkills();
+  }
+
+  porcentajeToString(skill : Skill){
+    return skill.porcentaje + '%';
+  }
+
+  cargarSkills():void{
+    this.skillS.lista().subscribe(
+      data => {
+        this.skills = data;
+      }
+    )
+  }
+
+  delete(id:number){
+    if(id!=undefined){
+      this.skillS.delete(id).subscribe(
+        data => {
+          this.cargarSkills();
+        }, err => {
+          //alert("No se pudo borrar la skill");
+          this.cargarSkills();
+        }
+      )
+    }
   }
 
 }

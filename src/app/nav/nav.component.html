@@ -88,7 +88,7 @@
           </li>
         </ul>
 
-        <div id="lenguage-switch">
+        <!-- <div id="lenguage-switch">
           <p>Lenguages:</p>
           <p>En</p>
           <div class="form-check form-switch">
@@ -99,17 +99,28 @@
             />
           </div>
           <p>Es</p>
-        </div>
+        </div> -->
 
-        <div id="login-btn">
+        <div id="login-btn" *ngIf="!isLogged">
           <p>Admin Opcions</p>
           <button
             class="btn-neon"
-            onclick="openLogin()"
+            (click)="openLogin()"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           >
             LogIn
+          </button>
+        </div>
+        <div id="login-btn" *ngIf="isLogged">
+          <p>Admin Opcions</p>
+          <button
+            class="btn-neon"
+            (click)="closeLogin()"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            LogOut
           </button>
         </div>
 

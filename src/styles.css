@@ -312,7 +312,7 @@
   
   /*?========================= Skills ======================*/
   .progress {
-    width: 65%;
+    width: 40%;
   }
   
   .progress-lenguage {
@@ -557,10 +557,11 @@
     z-index: 10;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
-  #usr-box svg,
-  #pass-box svg {
+  #usr-box i,
+  #pass-box i {
     width: 30px;
   }
   
@@ -575,6 +576,7 @@
   
   .card-body {
     padding-top: 0 !important;
+    width: 100%;
   }
   
   #close-login {
@@ -619,9 +621,9 @@
     }
   
     #barras-progreso {
-      width: 60%;
+      width: 100%;
       margin-left: 0;
-      margin-right: 10px;
+      margin-right: 0px;
     }
   
     .progress {
@@ -751,7 +753,7 @@
     }
   
     #barras-progreso {
-      width: 70%;
+      width: 100%;
       margin-left: 0;
       margin-right: 10px;
     }

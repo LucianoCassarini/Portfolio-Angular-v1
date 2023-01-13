@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 import { Persona } from '../persona.model';
 import { PersonaServicio } from '../persona.servicio';
 
@@ -8,11 +9,21 @@ import { PersonaServicio } from '../persona.servicio';
   styleUrls: ['./who-am-i.component.css']
 })
 export class WhoAmIComponent implements OnInit{
-  persona:Persona;
+  persona : Persona = null;
+  
+  constructor(public personaService :PersonaServicio,public loginService:LoginService){}
 
-  constructor(private personaServicio:PersonaServicio){}
+  isLogged : boolean = this.loginService.getToken();
 
   ngOnInit(): void {
-      this.persona = this.personaServicio.persona;
+    this.cargarPersona();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data
+      }
+    )
   }
 }

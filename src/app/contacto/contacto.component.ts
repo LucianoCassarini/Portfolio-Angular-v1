@@ -12,10 +12,18 @@ import { PersonaServicio } from '../persona.servicio';
 export class ContactoComponent implements OnInit{
   persona:Persona;
 
-  constructor(private personaServicio:PersonaServicio){}
+  constructor(private personaService:PersonaServicio){}
 
-  ngOnInit(){
-    this.persona = this.personaServicio.persona;
+  ngOnInit(): void {
+    this.cargarPersona();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(
+      data => {
+        this.persona = data
+      }
+    )
   }
   //******************************************************************************
   // *                           Copiar al portapapeles

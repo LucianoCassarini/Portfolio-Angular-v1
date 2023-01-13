@@ -1,5 +1,25 @@
-import { Persona } from "./persona.model";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Persona } from './persona.model';
 
-export class PersonaServicio{
-    persona:Persona = new Persona("../assets/ilustración4.png","Luciano Cassarini","lucianogabrielcassarini@gmail.com","https://www.linkedin.com/in/lcassarini/","https://www.instagram.com/lucianocassarini/","https://twitter.com/Lucho_Cassarini","3404516686","../assets/lcassariniCV.pdf");
+@Injectable({
+  providedIn: 'root',
+})
+export class PersonaServicio {
+  URL = 'http://localhost:8080/personas/';
+
+  constructor(private httpClient: HttpClient) {}
+
+  public lista(): Observable<Persona[]> {
+    return this.httpClient.get<Persona[]>(this.URL + 'lista');
+  }
+
+  public detail(id: number): Observable<Persona> {
+    return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
+  }
+
+  public update(id: number, persona: Persona): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
+  }
 }

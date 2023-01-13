@@ -1,12 +1,33 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { Proyecto } from "./proyecto.model";
 
+@Injectable({
+    providedIn: 'root'
+})
 export class ProyectoServicios{
-    proyectos:Proyecto[]=[
-        new Proyecto("../../assets/FondoProject.png","Titulo Proyecto","Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dolore ipsum est et?","https://github.com/","https://github.com/"),
-        new Proyecto("../../assets/FondoProject2.png","Titulo Proyecto","Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dolore ipsum est et?","https://github.com/","https://github.com/"),
-        new Proyecto("../../assets/FondoProject.png","Titulo Proyecto","Buenaaaaaa","https://github.com/","https://github.com/"),
-        new Proyecto("../../assets/FondoProject2.png","Titulo Proyecto","Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dolore ipsum est et?","https://github.com/","https://github.com/"),
-        new Proyecto("../../assets/FondoProject.png","Titulo Proyecto","Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dolore ipsum est et?","https://github.com/","https://github.com/"),
-        new Proyecto("../../assets/FondoProject.png","Titulo Proyecto","Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quibusdam dolore ipsum est et?","https://github.com/","https://github.com/")
-    ];
+    URL = 'http://localhost:8080/proyectos/';
+
+    constructor(private httpClient:HttpClient){}
+
+    public lista():Observable<Proyecto[]>{
+        return this.httpClient.get<Proyecto[]>(this.URL + 'lista');
+    }
+
+    public detail(id : number): Observable<Proyecto>{
+        return this.httpClient.get<Proyecto>(this.URL + `detail/${id}`);
+    }
+
+    public save(experiencia : Proyecto):Observable<any>{
+        return this.httpClient.post<any>(this.URL + 'create', experiencia);
+    }
+
+    public update(id:number, experiencia:Proyecto): Observable<any>{
+        return this.httpClient.put<any>(this.URL + `update/${id}`, experiencia);
+    }
+
+    public delete(id:number):Observable<any>{
+        return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+    }
 }

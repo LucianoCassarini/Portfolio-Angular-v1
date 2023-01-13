@@ -1,0 +1,68 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="text" class="form-control" id="correo" name="correo" [(ngModel)]="persona.correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="persona.telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">URL twitter</label>
+                    <input type="text" class="form-control" id="linkedin" name="linkedin" [(ngModel)]="persona.linkedin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="twitter">URL Twitter</label>
+                    <input type="text" class="form-control" id="twitter" name="twitter" [(ngModel)]="persona.twitter" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instagram">URL Instagram</label>
+                    <input type="text" class="form-control" id="instagram" name="instagram" [(ngModel)]="persona.instagram" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="urlcv">URL Curriculum</label>
+                    <input type="text" class="form-control" id="urlcv" name="urlcvm" [(ngModel)]="persona.urlcv" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="img">Cambiar Imagen Perfil</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="persona.img">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="usuario">Cambiar Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" [(ngModel)]="persona.usuario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contrasena">Cambiar Contraseña</label>
+                    <input type="text" class="form-control" id="contrasena" name="contrasena" [(ngModel)]="persona.contrasena" required>
+                </div>
+
+
+                <button class="btn btn-primary" >
+                    Actualizar persona
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
