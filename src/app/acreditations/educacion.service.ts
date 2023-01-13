@@ -7,7 +7,7 @@ import { Acreditation } from './acreditations.model';
   providedIn: 'root'
 })
 export class EducacionService implements OnInit {
-  URL = 'http://localhost:8080/educacion/';
+  URL = 'https://portfoliolgc.onrender.com/educacion/';
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
