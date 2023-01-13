@@ -1,11 +1,21 @@
 
+<div class="col-lg-2 boton-agregar" *ngIf="isLogged">
+  <button
+    type="button"
+    class="btn btn-dark"
+    routerLink="/nuevoproyecto"
+  >
+    <i class="fa-solid fa-plus"></i>
+  </button>
+</div>
+
 <div id="projects" class="container">
 
   <div class="contenedor" *ngFor="let proyecto of proyectos">
     <figure>
-      <img src={{proyecto.imagen}} alt={{proyecto.titulo}} />
+      <img src={{proyecto.imagen}} alt={{proyecto.nombre}} />
       <div class="capa glass">
-        <h3 class="neon-text">{{proyecto.titulo}}</h3>
+        <h3 class="neon-text">{{proyecto.nombre}}</h3>
         <p>
           {{proyecto.descripcion}}
         </p>
@@ -15,6 +25,22 @@
         </div>
       </div>
     </figure>
+    <div class="botones-de-edicion" *ngIf="isLogged">
+      <button
+        id="editar"
+        class="btn btn-dark"
+        routerLink="/editproyecto/{{ proyecto.id }}"
+      >
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+      <button
+        id="eliminar"
+        class="btn btn-dark"
+        (click)="delete(proyecto.id)"
+      >
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
   </div>
 
 </div>

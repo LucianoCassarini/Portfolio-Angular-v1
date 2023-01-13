@@ -36,6 +36,8 @@ import { EditSkillComponent } from './skills/edit-skill.component';
 import { NewSkillComponent } from './skills/new-skill.component';
 import { EditPersonaComponent } from './who-am-i/edit-persona.component';
 import { CommonModule } from '@angular/common';
+import { NewProyectoComponent } from './proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './proyectos/edit-proyecto.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { CommonModule } from '@angular/common';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EditPersonaComponent
+    EditPersonaComponent,
+    NewProyectoComponent,
+    EditProyectoComponent
   ],
   providers: [
     WorkServicio,
