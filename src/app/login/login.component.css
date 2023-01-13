@@ -1,0 +1,25 @@
+.centrar-pantalla {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin: 30px 10px;
+}
+
+.btn-log {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+#login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

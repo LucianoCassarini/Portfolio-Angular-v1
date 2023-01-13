@@ -1,6 +1,9 @@
-<div class="container">
+<div class="container glass border-glass">
     <div class="row">
         <div>
+            <a id="close-login" href="#">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </a>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreEdu">Titulo de estudio</label>
@@ -19,7 +22,7 @@
                     <input type="text" class="form-control" id="urlImagenEdu" name="urlImagenEdu" [(ngModel)]="urlImagenEdu" required>
                 </div>
 
-                <button class="btn btn-primary" >
+                <button class="btn btn-neon" >
                     Agregar educacion
                 </button>
             </form>
